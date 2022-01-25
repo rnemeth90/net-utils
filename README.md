@@ -1,22 +1,18 @@
-# dnsutils-container
-
-
-# Docker Container Name
+# net-utils
 
 A one paragraph description about the container.
 
 ## Getting Started
 
-These instructions will cover usage information and for the docker container 
+These instructions will cover usage information and for the docker container
 
 ### Prerequisities
 
-
 In order to run this container you'll need docker installed.
 
-* [Windows](https://docs.docker.com/windows/started)
-* [OS X](https://docs.docker.com/mac/started/)
-* [Linux](https://docs.docker.com/linux/started/)
+- [Windows](https://docs.docker.com/windows/started)
+- [OS X](https://docs.docker.com/mac/started/)
+- [Linux](https://docs.docker.com/linux/started/)
 
 ### Usage
 
@@ -25,69 +21,41 @@ In order to run this container you'll need docker installed.
 List the different parameters available to your container
 
 ```shell
-docker run give.example.org/of/your/container:v0.2.1 parameters
+docker run ryannemeth/net-utils:latest
 ```
 
-One example per permutation 
+# Run the container in a containers network namespace
 
 ```shell
-docker run give.example.org/of/your/container:v0.2.1
+docker run -it --net container:<container_name> ryannemeth/net-utils:latest
 ```
 
-Show how to get a shell started in your container too
+# Run the container in the hosts network namespace
 
 ```shell
-docker run give.example.org/of/your/container:v0.2.1 bash
+docker run -it --net host ryannemeth/net-utils:latest
 ```
 
-#### Environment Variables
+# How to get a shell started
 
-* `VARIABLE_ONE` - A Description
-* `ANOTHER_VAR` - More Description
-* `YOU_GET_THE_IDEA` - And another
-
-#### Volumes
-
-* `/your/file/location` - File location
-
-#### Useful File Locations
-
-* `/some/special/script.sh` - List special scripts
-  
-* `/magic/dir` - And also directories
+```shell
+docker run -it ryannemeth/net-utils:latest bash
+```
 
 ## Built With
 
-* List the software v0.1.3
-* And the version numbers v2.0.0
-* That are in this container v0.3.2
+- List the software v0.1.3
+- And the version numbers v2.0.0
+- That are in this container v0.3.2
 
 ## Find Us
 
-* [GitHub](https://github.com/your/repository)
-* [Quay.io](https://quay.io/repository/your/docker-repository)
+- [GitHub](https://github.com/rnemeth90)
 
-## Contributing
+## Includes:
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+```
+dns-utils
+nmap
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the 
-[tags on this repository](https://github.com/your/repository/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/repository/contributors) who 
-participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-* People you want to thank
-* If you took a bunch of code from somewhere list it here
+```
