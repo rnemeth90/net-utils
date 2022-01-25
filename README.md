@@ -42,20 +42,33 @@ docker run -it --net host ryannemeth/net-utils:latest
 docker run -it ryannemeth/net-utils:latest bash
 ```
 
-## Built With
+## Find Me
 
-- List the software v0.1.3
-- And the version numbers v2.0.0
-- That are in this container v0.3.2
-
-## Find Us
-
+- [Blog](https://www.geekyryan.com)
 - [GitHub](https://github.com/rnemeth90)
 
 ## Includes:
 
 ```
-dns-utils
+arpwatch
+bmon
+bwm-ng
+curl
+dhclient
+dnsutils
+ethtool
+hping
+iPerf
+iputils
+jwhois
+mtr
+ncat
+netcat
+nethogs
 nmap
+smokeping
+snort
+socat
+tcpdump
 
 ```
